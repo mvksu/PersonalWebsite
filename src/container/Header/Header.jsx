@@ -60,7 +60,7 @@ function Header() {
         className="app__header-circles"
       >
         {[images.flutter, images.redux, images.sass].map((circle, index) => (
-          <div className="circle-cmp app__flex">
+          <div className="circle-cmp app__flex" key={index}>
             <img src={circle} alt="" />
           </div>
         ))}
@@ -69,4 +69,4 @@ function Header() {
   );
 }
 
-export default AppWrap(Header)
+export default AppWrap(Header, "home")
