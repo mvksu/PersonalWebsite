@@ -2,7 +2,8 @@ import React from "react";
 import "./Header.scss";
 import { motion } from "framer-motion";
 import images from "../../constants/images";
-import AppWrap  from "../../wrapper/AppWrap"
+import AppWrap from "../../wrapper/AppWrap"
+import Icon from "./Icon";
 
 const scaleVariants = {
   whileInView: {
@@ -25,7 +26,9 @@ function Header() {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
+            <motion.div whileInView={{ rotate: [-60, 40, 0] }}>
+              <span>👋</span>
+            </motion.div>
             <div style={{ marginLeft: 20 }}>
               <p className="p=text">Hello, I am</p>
               <h1 className="head-text">Max</h1>
@@ -44,7 +47,8 @@ function Header() {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__header-img"
       >
-        <img src={images.profile} alt="profile_bg" />
+        <Icon />
+        {/* <img src={images.profile} alt="profile_bg" /> */}
         <motion.img
           whileInView={{ scale: [0, 1] }}
           transition={{ duration: 1, ease: "easeInOut" }}
