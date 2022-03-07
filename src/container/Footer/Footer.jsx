@@ -64,4 +64,4 @@ function Footer() {
   )
 }
 
-export default AppWrap(Footer, 'footer', 'app__whitebg')
+export default AppWrap(Footer, 'contacts', 'app__whitebg')

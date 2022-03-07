@@ -39,4 +39,4 @@ function Skills() {
   )
 }
 
-export default AppWrap(Skills)
+export default AppWrap(Skills, "skills")

@@ -2,7 +2,7 @@
 export default function NavigationDots({ active }) {
     return (
         <div className="app__navigation">
-            {["home", "about", "contact", "work", "skills", 'testimonials'].map((item, index) => (
+            {["home", "about", "work", "skills", "contacts"].map((item, index) => (
                 <a href={`#${item}`} key={item + index} className="app__navigation-dot" style={active === item ? { backgroundColor: '#313BAC' } : {}} />
             ))}
         </div>

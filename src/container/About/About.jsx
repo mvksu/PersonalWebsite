@@ -5,28 +5,7 @@ import images from "../../constants/images";
 import AppWrap from "../../wrapper/AppWrap";
 import { client, urlFor} from "../../client"
 
-const abouts = [
-  {
-    title: "Web Development",
-    description: "I am a goood web developer",
-    imgUrl: images.about01,
-  },
-  {
-    title: "UI/UX",
-    description: "I am a goood web developer",
-    imgUrl: images.about02,
-  },
-  {
-    title: "Backend",
-    description: "I am a goood web developer",
-    imgUrl: images.about03,
-  },
-  {
-    title: "Frontend",
-    description: "I am a goood web developer",
-    imgUrl: images.about04,
-  },
-];
+
 
 function About() {
   const [abouts, setAbouts] = useState([])
@@ -37,7 +16,7 @@ function About() {
   }, [])
 
   return (
-    <div>
+    <>
       <h2 className="head-text">
         I know that
         <span> Good Design</span>
@@ -61,7 +40,7 @@ function About() {
           </motion.div>
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
